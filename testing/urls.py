@@ -46,4 +46,5 @@ urlpatterns = [
     path("penilaian/edit-nilai/<int:id>/", views.edit_nilai, name="edit_nilai"),
     path("penilaian/pegawai-terbaik/", views.pegawai_terbaik, name="pegawai_terbaik"),
     path("riwayat/", views.riwayat, name="riwayat"),
+    path('riwayat-penilaian/<int:id>/<int:tahun_penilaian>/', views.riwayat_penilaian_detail, name='riwayat_penilaian_detail'),
 ]

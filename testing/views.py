@@ -601,3 +601,13 @@ def riwayat(request):
         'riwayat_type': riwayat_type,
         'tahun': tahun,
     })
+    
+def riwayat_penilaian_detail(request, id, tahun_penilaian):
+    penilaian = get_object_or_404(RiwayatPenilaian, id=id, tahun_penilaian=tahun_penilaian)
+    nilai_dict = eval(penilaian.nilai)  # Pastikan nilai dalam format dictionary string
+
+    context = {
+        'penilaian': penilaian,
+        'nilai_dict': nilai_dict,
+    }
+    return render(request, 'lihat_nilai_riwayat.html', context)

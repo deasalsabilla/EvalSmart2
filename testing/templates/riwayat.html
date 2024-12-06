@@ -141,7 +141,7 @@
                                         <td>{{ item.nama.nama }}</td>
                                         <td>{{ item.bidang.nama }}</td>
                                         <td>
-                                            <button class="btn btn-primary btn-sm">Lihat Nilai</button>
+                                            <a href="{% url 'riwayat_penilaian_detail' item.id item.tahun_penilaian %}" class="btn btn-primary btn-sm">Lihat Nilai</a>
                                         </td>
                                         <td>{{ item.tahun_penilaian }}</td>
                                     {% endif %}
